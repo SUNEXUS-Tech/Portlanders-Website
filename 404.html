@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Page Not Found | Portlanders Services</title>
+<meta name="description" content="The page you're looking for doesn't exist. Return to Portlanders Services homepage."/>
+<meta name="robots" content="noindex,follow"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#0A1628;--navy2:#0D1F3C;--navy3:#152848;
+  --brand:#E8920A;--brand2:#FF6B1A;--brand-lt:#FFF3E0;
+  --teal:#00A99D;--teal-lt:#E0F5F4;
+  --white:#FFFFFF;--off:#F8F8F6;--off2:#F0EEE9;
+  --border:#E5E2DC;--border2:#D4D0C9;
+  --text:#1A1A2E;--muted:#5C5C72;--light-muted:#9090A8;
+  --sans:'Inter',system-ui,sans-serif;
+  --head:'Poppins',system-ui,sans-serif;
+  --nav-h:80px;--max:1280px;
+  --ease:cubic-bezier(.4,0,.2,1);
+  --sh1:0 2px 8px rgba(0,0,0,.06);
+  --sh2:0 8px 32px rgba(0,0,0,.1);
+  --sh3:0 20px 60px rgba(0,0,0,.15);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+* { -webkit-tap-highlight-color: transparent; }
+a, button, [role="button"] { -webkit-tap-highlight-color: transparent; outline: none; }
+body{background:var(--white);color:var(--text);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul{list-style:none}
+button{cursor:pointer;font-family:var(--sans)}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--off)}
+::-webkit-scrollbar-thumb{background:var(--brand);border-radius:4px}
+
+/* ── TOP BAR ── */
+.topbar{background:var(--navy);padding:9px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.topbar-inner{max-width:var(--max);margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between}
+.topbar-left{display:flex;align-items:center;gap:24px}
+.topbar-item{display:flex;align-items:center;gap:6px;font-size:12.5px;color:rgba(255,255,255,.6);font-weight:500}
+.topbar-item svg{opacity:.6}
+.topbar-item a{color:rgba(255,255,255,.85);transition:color .2s}
+.topbar-item a:hover{color:var(--brand)}
+.topbar-right{display:flex;align-items:center;gap:16px}
+.topbar-social a{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:4px;background:rgba(255,255,255,.08);transition:background .2s}
+.topbar-social a:hover{background:var(--brand)}
+.topbar-social a svg{width:13px;height:13px;fill:rgba(255,255,255,.7)}
+
+/* ── NAV ── */
+#nav{position:sticky;top:0;z-index:999;background:var(--white);border-bottom:1px solid var(--border);box-shadow:var(--sh1);transition:box-shadow .3s}
+#nav.scrolled{box-shadow:var(--sh2)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 48px;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:32px}
+.nav-logo-img{height:120px !important;width:auto !important;max-width:200px;display:block}
+.nav-menu{display:flex;align-items:center;gap:4px;flex:1;justify-content:center}
+.nav-item{position:relative}
+.nav-link{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;color:var(--text);padding:8px 14px;border-radius:6px;transition:color .2s,background .2s;white-space:nowrap}
+.nav-link:hover,.nav-link.active{color:var(--brand);background:var(--brand-lt)}
+.nav-link svg{width:14px;height:14px;transition:transform .2s;flex-shrink:0}
+.nav-item:hover .nav-link svg{transform:rotate(180deg)}
+
+/* MEGA MENU */
+.mega{display:block;visibility:hidden;opacity:0;pointer-events:none;position:absolute;top:calc(100% + 2px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-radius:12px;box-shadow:var(--sh3);padding:28px;min-width:560px;z-index:1000}
+.nav-item:hover .mega,.mega:hover{visibility:visible;opacity:1;pointer-events:auto;transition:opacity .15s ease,visibility .15s ease}
+.mega-title{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin-bottom:12px}
+.mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.mega-link{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:500;color:var(--muted);padding:9px 12px;border-radius:6px;transition:all .18s}
+.mega-link:hover{background:var(--brand-lt);color:var(--brand)}
+.mega-link::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--border2);flex-shrink:0;transition:background .18s}
+.mega-link:hover::before{background:var(--brand)}
+.nav-item::after{content:"";position:absolute;top:100%;left:0;right:0;height:12px;background:transparent;display:none}
+.nav-item:hover::after{display:block}
+
+/* NAV ACTIONS */
+.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.02em;padding:11px 22px;border-radius:6px;border:2px solid transparent;transition:all .22s var(--ease);white-space:nowrap}
+.btn svg{transition:transform .18s}
+.btn:hover svg{transform:translateX(3px)}
+.btn-brand{background:var(--brand);color:var(--white);border-color:var(--brand)}
+.btn-brand:hover{background:var(--brand2);border-color:var(--brand2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(232,146,10,.35)}
+.btn-outline{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:var(--white);transform:translateY(-1px)}
+.btn-lg{padding:15px 32px;font-size:15px;border-radius:8px}
+.btn-sm{padding:8px 16px;font-size:12px;border-radius:5px}
+
+/* DM BUTTON */
+.dm-btn{background:none;border:1px solid var(--border);border-radius:6px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:all .2s}
+.dm-btn:hover{border-color:var(--brand);color:var(--brand)}
+.dm-moon,.dm-sun{width:16px;height:16px;transition:opacity .2s,transform .2s}
+[data-theme="light"] .dm-moon,[data-theme="dark"] .dm-sun{opacity:1;transform:scale(1)}
+[data-theme="light"] .dm-sun,[data-theme="dark"] .dm-moon{opacity:0;transform:scale(.6);position:absolute}
+
+/* HAMBURGER */
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px}
+.burger span{display:block;width:24px;height:2.5px;background:var(--text);border-radius:2px;transition:all .25s}
+.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-nav{display:none;position:fixed;top:0;inset-inline:0;bottom:0;background:var(--white);z-index:9998;overflow-y:auto;padding:16px}
+.mob-nav.open{display:block}
+.mob-nav-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.mob-logo-img{height:64px !important;width:auto !important;max-width:200px;display:block}
+.mob-close{background:none;border:1px solid var(--border);border-radius:6px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--muted);cursor:pointer}
+.mob-links{display:flex;flex-direction:column;gap:2px}
+.mob-link{font-size:16px;font-weight:600;color:var(--text);padding:10px 12px;border-radius:6px;border-bottom:1px solid var(--off2);transition:color .2s,background .2s}
+.mob-link:hover{color:var(--brand);background:var(--brand-lt)}
+.mob-actions{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+
+/* ── 404 PAGE ── */
+.w{max-width:var(--max);margin:0 auto;padding:0 48px}
+.page-404{min-height:calc(100vh - 80px - 48px);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--navy);padding:80px 0}
+.page-404-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(232,146,10,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(232,146,10,.07) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%)}
+.bg-glow-1{position:absolute;top:-10%;left:10%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(232,146,10,.12) 0%,transparent 70%)}
+.bg-glow-2{position:absolute;bottom:-10%;right:10%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,169,157,.1) 0%,transparent 70%)}
+.page-404-inner{position:relative;z-index:2;text-align:center;max-width:680px;margin:0 auto;padding:0 24px}
+
+/* Big 404 */
+.err-code{font-family:var(--head);font-size:clamp(100px,20vw,180px);font-weight:800;line-height:.9;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:2px rgba(232,146,10,.3);position:relative;margin-bottom:8px;user-select:none}
+.err-code::after{content:'404';position:absolute;inset:0;color:var(--brand);-webkit-text-stroke:0;filter:blur(40px);opacity:.25;z-index:-1}
+
+/* Animated icon */
+.err-icon-wrap{display:flex;justify-content:center;margin-bottom:28px}
+.err-icon{width:80px;height:80px;border-radius:20px;background:rgba(232,146,10,.1);border:1px solid rgba(232,146,10,.25);display:flex;align-items:center;justify-content:center;animation:float 4s ease-in-out infinite}
+.err-icon svg{width:38px;height:38px;stroke:var(--brand);stroke-width:1.5}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+.err-eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);margin-bottom:16px}
+.err-title{font-family:var(--head);font-size:clamp(26px,4vw,40px);font-weight:800;line-height:1.15;letter-spacing:-.02em;color:#ffffff;margin-bottom:18px}
+.err-desc{font-size:16px;line-height:1.75;color:rgba(255,255,255,.55);max-width:480px;margin:0 auto 36px}
+
+.err-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:52px}
+.btn-ghost-light{background:rgba(255,255,255,.08);color:var(--white);border:2px solid rgba(255,255,255,.2);padding:13px 26px;border-radius:6px;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all .22s var(--ease)}
+.btn-ghost-light:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.35)}
+.btn-brand-lg{background:var(--brand);color:var(--white);border:2px solid var(--brand);padding:13px 26px;border-radius:6px;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all .22s var(--ease)}
+.btn-brand-lg:hover{background:var(--brand2);border-color:var(--brand2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,146,10,.4)}
+.btn-brand-lg svg,.btn-ghost-light svg{width:16px;height:16px;transition:transform .18s}
+.btn-brand-lg:hover svg{transform:translateX(3px)}
+
+/* Quick links */
+.err-links-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px}
+.err-links{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.err-link{font-size:13px;font-weight:600;color:rgba(255,255,255,.45);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:8px 16px;transition:all .18s}
+.err-link:hover{color:var(--brand);border-color:rgba(232,146,10,.35);background:rgba(232,146,10,.08)}
+
+/* Ticker / divider line */
+.err-divider{width:60px;height:2px;background:rgba(232,146,10,.3);margin:0 auto 32px;border-radius:2px}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:var(--white)}
+.foot-top{padding:64px 0 48px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.4fr;gap:52px}
+.foot-logo{margin:0;padding:0}
+.foot-desc{font-size:13.5px;color:rgba(255,255,255,.4);line-height:1.7;max-width:260px}
+.foot-social{display:flex;gap:8px;margin-top:20px}
+.foot-social a{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:6px;background:rgba(255,255,255,.08);transition:background .2s}
+.foot-social a:hover{background:var(--brand)}
+.foot-social a svg{width:15px;height:15px;fill:rgba(255,255,255,.65)}
+.foot-head{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin-bottom:16px}
+.foot-links{display:flex;flex-direction:column;gap:9px}
+.foot-links a{font-size:13.5px;color:rgba(255,255,255,.45);transition:color .2s}
+.foot-links a:hover{color:var(--white)}
+.foot-ci{display:flex;align-items:flex-start;gap:9px;margin-bottom:11px}
+.foot-ci svg{flex-shrink:0;margin-top:3px;stroke:rgba(255,255,255,.35)}
+.foot-ci span{font-size:13px;color:rgba(255,255,255,.45);line-height:1.5}
+.foot-bot{display:flex;align-items:center;justify-content:space-between;padding:24px 0;flex-wrap:wrap;gap:12px}
+.foot-copy{font-size:12.5px;color:rgba(255,255,255,.25)}
+.foot-leg{display:flex;gap:20px}
+.foot-leg a{font-size:12px;color:rgba(255,255,255,.55);transition:color .2s}
+.foot-leg a:hover{color:rgba(255,255,255,.7)}
+
+/* ── SCROLL TO TOP ── */
+#stb{position:fixed;bottom:70px;right:28px;width:44px;height:44px;background:var(--brand);border:none;border-radius:8px;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(10px);transition:all .3s;z-index:400}
+#stb.show{opacity:1;transform:translateY(0)}
+#stb:hover{background:var(--brand2);transform:translateY(-2px)}
+#stb svg{width:20px;height:20px;stroke:var(--white)}
+
+/* ── DARK MODE ── */
+[data-theme="dark"] {
+  --navy:#0A1628;--navy2:#0D1F3C;
+  --white:#121212;--off:#1A1A1A;--off2:#222222;
+  --border:#2A2A2A;--border2:#333333;
+  --text:#E8E8E8;--muted:#A0A0A0;--light-muted:#666666;
+  --brand-lt:rgba(232,146,10,.15);
+  --teal-lt:rgba(0,169,157,.15);
+}
+[data-theme="dark"] #nav { background:rgba(18,18,18,.97) !important; border-color:#2a2a2a; }
+[data-theme="dark"] .mega { background:#1a1a1a; border-color:#2a2a2a; }
+[data-theme="dark"] .mega-link { color:var(--muted); }
+[data-theme="dark"] .mega-link:hover { background:rgba(232,146,10,.15); color:var(--brand); }
+[data-theme="dark"] .mega-link:hover::before { background:var(--brand); }
+[data-theme="dark"] .nav-link:hover, [data-theme="dark"] .nav-link.active { background:rgba(232,146,10,.15); color:var(--brand); }
+[data-theme="dark"] .mob-nav { background:#121212; }
+[data-theme="dark"] .mob-link { color:var(--text); border-color:#2a2a2a; }
+[data-theme="dark"] .mob-link:hover { color:var(--brand); background:rgba(232,146,10,.15); }
+[data-theme="dark"] .mob-close { color:var(--muted); border-color:#2a2a2a; }
+[data-theme="dark"] .topbar { background:#0a0a0a; }
+[data-theme="dark"] .burger span { background:var(--text); }
+[data-theme="dark"] .btn-outline { color:var(--text); border-color:var(--border2); }
+[data-theme="dark"] .btn-outline:hover { background:rgba(232,146,10,.2); color:var(--brand); border-color:var(--brand); }
+[data-theme="dark"] .btn-ghost-light:hover { background:rgba(255,255,255,.12); color:var(--white); }
+
+/* ── OVERFLOW HIDDEN ── */
+body { overflow-x: hidden; }
+
+/* ── LOGO SIZING ── */
+.nav-logo-img {
+  height: 120px !important;
+  width: auto !important;
+  max-width: 200px;
+  display: block;
+}
+.mob-logo-img {
+  height: 64px !important;
+  width: auto !important;
+  max-width: 200px;
+  display: block;
+}
+.foot-logo-img {
+  height: 80px !important;
+  width: auto !important;
+  max-width: 200px;
+  display: block;
+}
+
+/* Nav inner — keep logo from overflowing */
+.nav-inner { min-height: var(--nav-h); flex-wrap: nowrap; overflow: visible; }
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .w{padding:0 32px}.nav-inner{padding:0 32px}
+  .topbar-inner{padding:0 32px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
+}
+
+@media (max-width: 900px) {
+  .mega { display: none !important; }
+  .nav-menu { display: none; }
+  .burger { display: flex; }
+  .topbar-left .topbar-item:nth-child(3) { display: none; }
+}
+
+@media (max-width: 640px) {
+  body { overflow-x: hidden; }
+  .w { padding: 0 18px; }
+  :root { --nav-h: 68px; }
+  .nav-inner { padding: 0 14px; gap: 8px; }
+  .topbar { display: none; }
+  .nav-logo-img { height: 90px !important; max-width: 200px; }
+  .nav-actions { gap: 6px; }
+  .nav-actions .btn-brand { padding: 9px 12px; font-size: 12px; gap: 5px; }
+  .nav-actions .btn-brand svg { width: 13px; height: 13px; }
+  .dm-btn { width: 32px; height: 32px; }
+  .foot-grid { grid-template-columns: 1fr; gap: 32px; }
+  .foot-top { padding: 48px 0 36px; }
+  .foot-desc { max-width: 100%; font-size: 13px; }
+  .foot-bot { flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+  .foot-leg { flex-wrap: wrap; justify-content: center; gap: 14px; }
+  .foot-logo-img { height: 120px !important; }
+  .err-actions { flex-direction: column; align-items: center; }
+  .btn-brand-lg, .btn-ghost-light { width: 100%; max-width: 320px; justify-content: center; }
+}
+
+@media (max-width: 380px) {
+  .w { padding: 0 14px; }
+  .nav-logo-img { height: 90px !important; max-width: 180px; }
+  .foot-logo-img { height: 100px !important; }
+  .mob-logo-img { height: 64px !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <div class="topbar-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+        <a href="tel:+2348077733324">+234 807 773 3324</a>
+      </div>
+      <div class="topbar-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:info@portlandersservices.com">info@portlandersservices.com</a>
+      </div>
+      <div class="topbar-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Lagos, Nigeria
+      </div>
+    </div>
+    <div class="topbar-right topbar-social">
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="/"><img src="/images/Portlanders-03.png" alt="Portlanders Services" class="nav-logo-img"/></a>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+      <li class="nav-item">
+        <a href="/iso" class="nav-link">ISO Standards <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="mega">
+          <div class="mega-title">Popular Frameworks</div>
+          <div class="mega-grid">
+            <a href="/iso-9001" class="mega-link">9001 – Quality Management</a>
+            <a href="/iso-27001" class="mega-link">27001 – Information Security</a>
+            <a href="/iso-45001" class="mega-link">45001 – Health &amp; Safety</a>
+            <a href="/iso-14001" class="mega-link">14001 – Environmental</a>
+            <a href="/iso-37001" class="mega-link">37001 – Anti-Bribery</a>
+            <a href="/iso-22301" class="mega-link">22301 – Business Continuity</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="/services.html" class="nav-link">Our Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="mega">
+          <div class="mega-title">Services</div>
+          <div class="mega-grid">
+            <a href="/services#mgmt" class="mega-link">Management System Consulting</a>
+            <a href="/services#eng" class="mega-link">Engineering &amp; ICT Consulting</a>
+            <a href="/services#risk" class="mega-link">Risk &amp; Compliance</a>
+            <a href="/services#audit" class="mega-link">Internal Audits &amp; Gap Analysis</a>
+            <a href="/services#process" class="mega-link">Our 6-Step Process</a>
+            <a href="/services#training" class="mega-link">Training &amp; Awareness</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="dm-btn" id="dm-btn" aria-label="Toggle dark mode">
+        <svg class="dm-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <svg class="dm-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="/contact" class="btn btn-brand">Get a Quote <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mob-nav" id="mob-nav">
+  <div class="mob-nav-head">
+    <img src="/images/Portlanders-03.png" alt="Portlanders Services" class="mob-logo-img"/>
+    <button class="mob-close" id="mob-close">&times;</button>
+  </div>
+  <div class="mob-links">
+    <a href="/" class="mob-link">Home</a>
+    <a href="/iso" class="mob-link">ISO Standards</a>
+    <a href="/services" class="mob-link">Our Services</a>
+    <a href="/about" class="mob-link">About Us</a>
+    <a href="/privacy" class="mob-link">Privacy Policy</a>
+  </div>
+  <div class="mob-actions">
+    <a href="/contact" class="btn btn-brand" style="justify-content:center;width:100%">Get a Quote →</a>
+  </div>
+</div>
+
+<!-- ── 404 MAIN ── -->
+<main class="page-404">
+  <div class="page-404-bg">
+    <div class="bg-grid"></div>
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+  </div>
+  <div class="page-404-inner">
+
+    <div class="err-code">404</div>
+
+    <div class="err-icon-wrap">
+      <div class="err-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          <line x1="11" y1="8" x2="11" y2="12"/><line x1="11" y1="16" x2="11.01" y2="16"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="err-eyebrow">Page Not Found</div>
+    <h1 class="err-title">This page has gone<br/>off the grid</h1>
+    <p class="err-desc">The page you're looking for may have been moved, renamed, or doesn't exist. Let's get you back on track.</p>
+
+    <div class="err-divider"></div>
+
+    <div class="err-actions">
+      <a href="/" class="btn-brand-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Back to Homepage
+      </a>
+      <a href="/contact" class="btn-ghost-light">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Contact Us
+      </a>
+    </div>
+
+    <p class="err-links-label">Or explore these pages</p>
+    <div class="err-links">
+      <a href="/iso" class="err-link">ISO Standards</a>
+      <a href="/services" class="err-link">Our Services</a>
+      <a href="/about" class="err-link">About Us</a>
+      <a href="/iso-9001" class="err-link">ISO 9001</a>
+      <a href="/iso-27001" class="err-link">ISO 27001</a>
+      <a href="/iso-45001" class="err-link">ISO 45001</a>
+    </div>
+
+  </div>
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="foot-top">
+    <div class="w">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-logo" style="margin:0;padding:0"><img src="/images/Portlanders-03.png" alt="Portlanders Services" class="foot-logo-img"/></div>
+          <p class="foot-desc">Professional ISO consulting &amp; engineering advisory services. Helping organisations across Nigeria and Africa achieve compliance, resilience, and operational excellence.</p>
+          <div class="foot-social">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-head">ISO Standards</div>
+          <ul class="foot-links">
+            <li><a href="/iso-9001">ISO 9001 – Quality</a></li>
+            <li><a href="/iso-27001">ISO 27001 – Info Security</a></li>
+            <li><a href="/iso-45001">ISO 45001 – H&amp;S</a></li>
+            <li><a href="/iso-14001">ISO 14001 – Environmental</a></li>
+            <li><a href="/iso-37001">ISO 37001 – Anti-Bribery</a></li>
+            <li><a href="/iso-22301">ISO 22301 – Continuity</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="foot-head">Services</div>
+          <ul class="foot-links">
+            <li><a href="/services">Management Systems</a></li>
+            <li><a href="/services">Engineering Consulting</a></li>
+            <li><a href="/services">Risk &amp; Compliance</a></li>
+            <li><a href="/services">Internal Audits</a></li>
+            <li><a href="/services">Training &amp; Awareness</a></li>
+            <li><a href="/about">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="foot-head">Contact</div>
+          <div class="foot-ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg><span>+234 807 773 3324</span></div>
+          <div class="foot-ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>info@portlandersservices.com</span></div>
+          <div class="foot-ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>59c Association Crescent,<br/>Agege, Lagos, Nigeria</span></div><div class="foot-ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>1501 South Greenley Hwy Ste C #1600 Cheyenne, WY 82007</span></div>
+          <div style="margin-top:18px"><a href="/contact" class="btn btn-brand btn-sm">Get a Quote →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w">
+    <div class="foot-bot">
+      <p class="foot-copy">Copyright&copy; 2026 Portlanders Services Limited. All rights reserved. <a href="https://www.leadtrotech.com.ng" target="_blank" rel="noopener noreferrer">Site developed by Leadtrotech Technologies Limited</a></p>
+      <div class="foot-leg"><a href="/privacy">Privacy Policy</a><a href="#">Terms of Use</a><a href="/contact">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="stb" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<script>
+(function(){
+  var root = document.documentElement;
+
+  /* ── THEME ── */
+  var saved = localStorage.getItem('theme') || 'dark';
+  root.setAttribute('data-theme', saved);
+
+  var btn = document.getElementById('dm-btn');
+  if(btn){
+    btn.addEventListener('click', function(){
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  }
+
+  /* ── NAV SCROLL ── */
+  var n = document.getElementById('nav');
+  if(n) window.addEventListener('scroll', function(){ n.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+
+  /* ── MOBILE NAV ── */
+  var b = document.getElementById('burger'), m = document.getElementById('mob-nav'), c = document.getElementById('mob-close');
+  if(b){
+    b.addEventListener('click', function(){ b.classList.toggle('open'); m.classList.toggle('open'); });
+    if(c) c.addEventListener('click', function(){ b.classList.remove('open'); m.classList.remove('open'); });
+  }
+
+  /* ── SCROLL TO TOP ── */
+  var stb = document.getElementById('stb');
+  if(stb){
+    window.addEventListener('scroll', function(){ stb.classList.toggle('show', window.scrollY > 400); }, {passive:true});
+    stb.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+  }
+})();
+</script>
+</body>
+</html>

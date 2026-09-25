@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About Us — Nigeria's ISO Experts | Portlanders Services</title>
+<meta name="description" content="About Portlanders Services — expert ISO management system consultants based in Lagos, Nigeria with 23+ years of combined experience."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#0A1628;--navy2:#0D1F3C;--navy3:#152848;
+  --brand:#E8920A;--brand2:#FF6B1A;--brand-lt:#FFF3E0;
+  --teal:#00A99D;--teal-lt:#E0F5F4;
+  --white:#FFFFFF;--off:#F8F8F6;--off2:#F0EEE9;
+  --border:#E5E2DC;--border2:#D4D0C9;
+  --text:#1A1A2E;--muted:#5C5C72;--light-muted:#9090A8;
+  --sans:'Inter',system-ui,sans-serif;
+  --head:'Poppins',system-ui,sans-serif;
+  --nav-h:80px;--max:1280px;
+  --ease:cubic-bezier(.4,0,.2,1);
+  --sh1:0 2px 8px rgba(0,0,0,.06);
+  --sh2:0 8px 32px rgba(0,0,0,.1);
+  --sh3:0 20px 60px rgba(0,0,0,.15);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+* { -webkit-tap-highlight-color: transparent; }
+a, button, [role="button"] { -webkit-tap-highlight-color: transparent; outline: none; }
+body{background:var(--white);color:var(--text);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul{list-style:none}
+button{cursor:pointer;font-family:var(--sans)}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--off)}
+::-webkit-scrollbar-thumb{background:var(--brand);border-radius:4px}
+
+/* ── TOP BAR ── */
+.topbar{background:var(--navy);padding:9px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.topbar-inner{max-width:var(--max);margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between}
+.topbar-left{display:flex;align-items:center;gap:24px}
+.topbar-item{display:flex;align-items:center;gap:6px;font-size:12.5px;color:rgba(255,255,255,.6);font-weight:500}
+.topbar-item svg{opacity:.6}
+.topbar-item a{color:rgba(255,255,255,.85);transition:color .2s}
+.topbar-item a:hover{color:var(--brand)}
+.topbar-right{display:flex;align-items:center;gap:16px}
+.topbar-social a{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:4px;background:rgba(255,255,255,.08);transition:background .2s}
+.topbar-social a:hover{background:var(--brand)}
+.topbar-social a svg{width:13px;height:13px;fill:rgba(255,255,255,.7)}
+
+/* ── NAV ── */
+#nav{position:sticky;top:0;z-index:999;background:var(--white);border-bottom:1px solid var(--border);box-shadow:var(--sh1);transition:box-shadow .3s}
+#nav.scrolled{box-shadow:var(--sh2)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 48px;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:32px}
+.nav-logo img{height:46px;width:auto}
+.nav-menu{display:flex;align-items:center;gap:4px;flex:1;justify-content:center}
+.nav-item{position:relative}
+.nav-link{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:600;color:var(--text);padding:8px 14px;border-radius:6px;transition:color .2s,background .2s;white-space:nowrap}
+.nav-link:hover,.nav-link.active{color:var(--brand);background:var(--brand-lt)}
+.nav-link svg{width:14px;height:14px;transition:transform .2s;flex-shrink:0}
+.nav-item:hover .nav-link svg{transform:rotate(180deg)}
+
+/* MEGA MENU */
+.mega{display:block;visibility:hidden;opacity:0;pointer-events:none;position:absolute;top:calc(100% + 2px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-radius:12px;box-shadow:var(--sh3);padding:28px;min-width:560px;z-index:1000}
+.nav-item:hover .mega,.mega:hover{visibility:visible;opacity:1;pointer-events:auto;transition:opacity .15s ease,visibility .15s ease}
+.mega-title{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin-bottom:12px}
+.mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.mega-link{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:500;color:var(--muted);padding:9px 12px;border-radius:6px;transition:all .18s}
+.mega-link:hover{background:var(--brand-lt);color:var(--brand)}
+.mega-link::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--border2);flex-shrink:0;transition:background .18s}
+.mega-link:hover::before{background:var(--brand)}.nav-item::after{content:"";position:absolute;top:100%;left:0;right:0;height:12px;background:transparent;display:none}.nav-item:hover::after{display:block}
+
+/* NAV ACTIONS */
+.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.02em;padding:11px 22px;border-radius:6px;border:2px solid transparent;transition:all .22s var(--ease);white-space:nowrap}
+.btn svg{transition:transform .18s}
+.btn:hover svg{transform:translateX(3px)}
+.btn-brand{background:var(--brand);color:var(--white);border-color:var(--brand)}
+.btn-brand:hover{background:var(--brand2);border-color:var(--brand2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(232,146,10,.35)}
+.btn-outline{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:var(--white);transform:translateY(-1px)}
+.btn-ghost-light{background:rgba(255,255,255,.12);color:var(--white);border-color:rgba(255,255,255,.3)}
+.btn-ghost-light:hover{background:var(--white);color:var(--navy)}
+.btn-lg{padding:15px 32px;font-size:15px;border-radius:8px}
+.btn-sm{padding:8px 16px;font-size:12px;border-radius:5px}
+
+/* HAMBURGER */
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px}
+.burger span{display:block;width:24px;height:2.5px;background:var(--text);border-radius:2px;transition:all .25s}
+.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-nav{display:none;position:fixed;top:0;inset-inline:0;bottom:0;background:var(--white);z-index:9998;overflow-y:auto;padding:16px}
+.mob-nav.open{display:block}
+.mob-nav-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.mob-close{background:none;border:1px solid var(--border);border-radius:6px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--muted);cursor:pointer}
+.mob-links{display:flex;flex-direction:column;gap:2px}
+.mob-link{font-size:16px;font-weight:600;color:var(--text);padding:10px 12px;border-radius:6px;border-bottom:1px solid var(--off2);transition:color .2s,background .2s}
+.mob-link:hover{color:var(--brand);background:var(--brand-lt)}
+.mob-actions{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+
+/* WRAP */
+.w{max-width:var(--max);margin:0 auto;padding:0 48px}
+.s{padding:96px 0}.s-sm{padding:64px 0}.s-xs{padding:48px 0}
+.s-dark{background:var(--navy);color:var(--white)}
+.s-navy2{background:var(--navy2);color:var(--white)}
+.s-off{background:var(--off)}.s-off2{background:var(--off2)}
+.s-teal{background:var(--teal);color:var(--white)}
+
+/* HERO */
+.hero{min-height:88vh;display:flex;align-items:center;position:relative;overflow:hidden;background:var(--navy)}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,22,40,.95) 0%,rgba(10,22,40,.7) 55%,rgba(10,22,40,.3) 100%)}
+.hero-content{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);background:rgba(232,146,10,.12);border:1px solid rgba(232,146,10,.25);padding:6px 14px;border-radius:4px;margin-bottom:24px}
+.hero-tag span{display:block;width:6px;height:6px;border-radius:50%;background:var(--brand);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:var(--head);font-size:clamp(40px,5vw,68px);font-weight:800;line-height:1.08;letter-spacing:-.02em;color:var(--white);margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero-sub{font-size:clamp(15px,1.4vw,18px);font-weight:400;line-height:1.75;color:rgba(255,255,255,.65);margin-bottom:36px;max-width:520px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-right{position:relative}
+.hero-card{background:rgba(255,255,255,.06);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px;color:var(--white)}
+.hero-card-title{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin-bottom:18px}
+.hero-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hci{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:18px 16px;transition:border-color .2s}
+.hci:hover{border-color:rgba(232,146,10,.4)}
+.hci-num{font-family:var(--head);font-size:36px;font-weight:800;color:var(--brand);line-height:1}
+.hci-label{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:4px}
+.hci-pills{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;padding:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px}
+.hci-pill{font-size:11px;font-weight:600;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:4px 10px;transition:all .18s}
+.hci-pill:hover{border-color:var(--brand);color:var(--brand)}
+
+/* SECTION HEADS */
+.sh{margin-bottom:52px}
+.sh-center{text-align:center;max-width:640px;margin-inline:auto;margin-bottom:52px}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);margin-bottom:14px}
+.eyebrow-line{display:block;width:28px;height:2px;background:var(--brand);flex-shrink:0}
+.eyebrow-c{justify-content:center}
+.eyebrow-c .eyebrow-line{display:none}
+h2.title{font-family:var(--head);font-size:clamp(30px,3.5vw,48px);font-weight:800;line-height:1.12;letter-spacing:-.02em;color:var(--text)}
+h2.title em{font-style:normal;color:var(--brand)}
+h2.title-light{color:var(--white)}
+h3.sub-title{font-family:var(--head);font-size:clamp(18px,2vw,26px);font-weight:700;line-height:1.25;color:var(--text)}
+h3.sub-title-light{color:var(--white)}
+.lead{font-size:clamp(15px,1.3vw,18px);font-weight:400;line-height:1.75;color:var(--muted);margin-top:14px}
+.lead-light{font-size:clamp(15px,1.3vw,18px);font-weight:400;line-height:1.75;color:rgba(255,255,255,.6);margin-top:14px}
+.body-text{font-size:15px;line-height:1.8;color:var(--muted)}
+.body-light{font-size:15px;line-height:1.8;color:rgba(255,255,255,.6)}
+
+/* STAT BAR */
+.statbar{display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--brand);background:var(--navy)}
+.si{padding:36px 28px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
+.si:last-child{border-right:none}
+.sn{font-family:var(--head);font-size:clamp(36px,4vw,54px);font-weight:800;color:var(--brand);line-height:1}
+.sl{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:8px}
+
+/* PRINCIPLE TABS (IMSM style) */
+.principles{display:grid;grid-template-columns:1fr 1.4fr;gap:0;background:var(--off);border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+.ptabs{display:flex;flex-direction:column}
+.ptab{display:flex;align-items:flex-start;gap:14px;padding:24px 28px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .2s;position:relative}
+.ptab:last-child{border-bottom:none}
+.ptab.active,.ptab:hover{background:var(--white)}
+.ptab.active::after{content:'';position:absolute;right:0;top:0;bottom:0;width:3px;background:var(--brand)}
+.ptab-icon{width:40px;height:40px;border-radius:8px;background:var(--off2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+.ptab.active .ptab-icon,.ptab:hover .ptab-icon{background:var(--brand-lt)}
+.ptab-icon svg{width:20px;height:20px;stroke:var(--muted);transition:stroke .2s}
+.ptab.active .ptab-icon svg,.ptab:hover .ptab-icon svg{stroke:var(--brand)}
+.ptab-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--light-muted)}
+.ptab-title{font-size:15px;font-weight:700;color:var(--text);margin-top:2px}
+.ptab.active .ptab-title{color:var(--brand)}
+.ppanel{display:none;padding:40px;background:var(--white)}
+.ppanel.active{display:flex;flex-direction:column;justify-content:center}
+.ppanel img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;margin-bottom:24px}
+.ppanel h3{font-family:var(--head);font-size:22px;font-weight:700;margin-bottom:12px;color:var(--text)}
+.ppanel p{font-size:15px;color:var(--muted);line-height:1.75}
+
+/* SERVICE CARDS (IMSM grid style) */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+.svc-card{background:var(--white);padding:36px 30px;transition:background .2s}
+.svc-card:hover{background:var(--off)}
+.svc-num{font-family:var(--head);font-size:48px;font-weight:800;color:rgba(232,146,10,.12);line-height:1;margin-bottom:12px;transition:color .2s}
+.svc-card:hover .svc-num{color:rgba(232,146,10,.25)}
+.svc-icon{width:48px;height:48px;border-radius:8px;background:var(--teal-lt);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.svc-icon svg{width:24px;height:24px;stroke:var(--teal)}
+.svc-title{font-family:var(--head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:10px;line-height:1.25}
+.svc-text{font-size:13.5px;color:var(--muted);line-height:1.75}
+.svc-link{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:var(--brand);margin-top:16px;letter-spacing:.04em;transition:gap .18s}
+.svc-link:hover{gap:8px}
+
+/* ISO CARDS (big branded style like IMSM) */
+.iso-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.iso-card{background:var(--white);border:2px solid var(--border);border-radius:10px;overflow:hidden;transition:all .28s var(--ease);cursor:pointer}
+.iso-card:hover{border-color:var(--brand);transform:translateY(-4px);box-shadow:0 16px 40px rgba(232,146,10,.15)}
+.iso-card-top{padding:24px 20px 0}
+.iso-num{font-family:var(--head);font-size:32px;font-weight:800;color:var(--brand);line-height:1}
+.iso-std{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light-muted);margin-top:2px}
+.iso-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;margin-top:12px}
+.iso-card-body{padding:16px 20px 20px}
+.iso-card-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px}
+.iso-card-text{font-size:13px;color:var(--muted);line-height:1.65}
+
+/* PROCESS (5-step IMSM style) */
+.process-strip{display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+.process-strip::before{content:'';position:absolute;top:32px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--brand),var(--teal));z-index:0}
+.ps-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px;position:relative;z-index:1}
+.ps-dot{width:64px;height:64px;border-radius:50%;background:var(--white);border:3px solid var(--brand);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:all .25s;flex-shrink:0}
+.ps-dot svg{width:28px;height:28px;stroke:var(--brand)}
+.ps-item:hover .ps-dot{background:var(--brand)}
+.ps-item:hover .ps-dot svg{stroke:var(--white)}
+.ps-num{position:absolute;top:-8px;right:calc(50% - 40px);font-size:10px;font-weight:700;background:var(--navy);color:var(--white);width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ps-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:6px}
+.ps-text{font-size:12.5px;color:var(--muted);line-height:1.6}
+
+/* TEAM CARD */
+.tc{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:box-shadow .3s,transform .3s}
+.tc:hover{box-shadow:var(--sh3);transform:translateY(-4px)}
+.tc-photo{width:100%;aspect-ratio:1;object-fit:cover;object-position:top}
+.tc-body{padding:24px}
+.tc-name{font-family:var(--head);font-size:20px;font-weight:700;margin-bottom:3px}
+.tc-role{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.tc-bio{font-size:13px;color:var(--muted);line-height:1.7}
+.cert-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
+.cert{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brand);border:1px solid rgba(232,146,10,.25);padding:3px 8px;border-radius:3px;background:var(--brand-lt)}
+
+/* CTA BAND (full-width navy/brand IMSM style) */
+.cta-band{background:var(--navy);padding:80px 0;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--brand),var(--teal))}
+.cta-band-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.15}
+.cta-band-content{position:relative;z-index:2;text-align:center;max-width:720px;margin:0 auto}
+
+/* TESTIMONIAL */
+.testi{background:var(--off);border-radius:10px;padding:36px 32px;border:1px solid var(--border);transition:box-shadow .3s}
+.testi:hover{box-shadow:var(--sh2)}
+.testi-stars{display:flex;gap:3px;margin-bottom:16px}
+.testi-star{color:var(--brand);font-size:16px}
+.testi-text{font-size:15px;color:var(--text);line-height:1.75;font-style:italic;margin-bottom:20px}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--teal));display:flex;align-items:center;justify-content:center;font-family:var(--head);font-size:14px;font-weight:700;color:var(--white)}
+.testi-name{font-size:14px;font-weight:700;color:var(--text)}
+.testi-company{font-size:12px;color:var(--light-muted)}
+
+/* CHECKLIST */
+.cklist{display:flex;flex-direction:column;gap:12px}
+.cklist li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--muted)}
+.cklist li::before{content:'';display:block;min-width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Ccircle cx='11' cy='11' r='11' fill='%23E8920A' opacity='.12'/%3E%3Cpath d='M7 11l3 3 5-5' stroke='%23E8920A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/contain no-repeat;margin-top:1px}
+.cklist-light li{color:rgba(255,255,255,.7)}
+.cklist-light li::before{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Ccircle cx='11' cy='11' r='11' fill='%23E8920A' opacity='.25'/%3E%3Cpath d='M7 11l3 3 5-5' stroke='%23E8920A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* FORM */
+.form-wrap{background:var(--white);border-radius:12px;padding:40px;border:1px solid var(--border);box-shadow:var(--sh2)}
+.form{display:flex;flex-direction:column;gap:16px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fg{display:flex;flex-direction:column;gap:6px}
+.flabel{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.finput,.ftextarea,.fsel{font-family:var(--sans);font-size:15px;color:var(--text);background:var(--off);border:1.5px solid var(--border2);border-radius:7px;padding:12px 16px;outline:none;width:100%;transition:border-color .2s,background .2s;-webkit-appearance:none}
+.finput::placeholder,.ftextarea::placeholder{color:var(--light-muted)}
+.finput:focus,.ftextarea:focus,.fsel:focus{border-color:var(--brand);background:var(--white)}
+.ftextarea{min-height:130px;resize:vertical}
+.fsel{cursor:pointer;color:var(--light-muted)}
+.fsel.filled{color:var(--text)}
+.fnote{font-size:12px;color:var(--light-muted);text-align:center}
+.fsuccess{display:none;text-align:center;padding:48px 24px}
+.fsuccess-icon{width:60px;height:60px;background:rgba(0,169,157,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.fsuccess h3{font-family:var(--head);font-size:24px;font-weight:700;margin-bottom:8px}
+.fsuccess p{font-size:15px;color:var(--muted)}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:22px 0;cursor:pointer;gap:16px;font-size:16px;font-weight:600;color:var(--text);transition:color .2s}
+.faq-q:hover{color:var(--brand)}
+.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--off2);border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .25s}
+.faq-item.open .faq-icon{background:var(--brand);border-color:var(--brand)}
+.faq-icon svg{width:14px;height:14px;stroke:var(--muted);transition:all .25s}
+.faq-item.open .faq-icon svg{stroke:var(--white);transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .38s var(--ease)}
+.faq-item.open .faq-a{max-height:260px}
+.faq-a-inner{padding:0 0 20px;font-size:15px;color:var(--muted);line-height:1.75}
+
+/* PAGE HERO */
+.ph{min-height:55vh;display:flex;align-items:flex-end;padding-bottom:72px;position:relative;overflow:hidden}
+.ph-full{min-height:88vh;align-items:center;padding-bottom:0}
+.ph-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,22,40,.6) 0%,rgba(10,22,40,.85) 100%)}
+.ph-content{position:relative;z-index:2;color:var(--white)}
+.bc{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:16px}
+.bc a{color:var(--brand)}
+.bc sep{color:rgba(255,255,255,.25);margin:0 2px}
+
+/* GRID HELPERS */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.g2-wide{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.g2-wide-rev{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+
+/* FOOTER */
+footer{background:var(--navy);color:var(--white)}
+.foot-top{padding:64px 0 48px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.4fr;gap:52px}
+.foot-logo{margin:0;padding:0}
+.foot-desc{font-size:13.5px;color:rgba(255,255,255,.4);line-height:1.7;max-width:260px}
+.foot-social{display:flex;gap:8px;margin-top:20px}
+.foot-social a{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:6px;background:rgba(255,255,255,.08);transition:background .2s}
+.foot-social a:hover{background:var(--brand)}
+.foot-social a svg{width:15px;height:15px;fill:rgba(255,255,255,.65)}
+.foot-head{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin-bottom:16px}
+.foot-links{display:flex;flex-direction:column;gap:9px}
+.foot-links a{font-size:13.5px;color:rgba(255,255,255,.45);transition:color .2s}
+.foot-links a:hover{color:var(--white)}
+.foot-ci{display:flex;align-items:flex-start;gap:9px;margin-bottom:11px}
+.foot-ci svg{flex-shrink:0;margin-top:3px;stroke:rgba(255,255,255,.35)}
+.foot-ci span{font-size:13px;color:rgba(255,255,255,.45);line-height:1.5}
+.foot-bot{display:flex;align-items:center;justify-content:space-between;padding:24px 0;flex-wrap:wrap;gap:12px}
+.foot-copy{font-size:12.5px;color:rgba(255,255,255,.25)}
+.foot-leg{display:flex;gap:20px}
+.foot-leg a{font-size:12px;color:rgba(255,255,255,.55);transition:color .2s}
+.foot-leg a:hover{color:rgba(255,255,255,.7)}
+
+/* ANIM */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rv.v{opacity:1;transform:translateY(0)}
+.rv-l{opacity:0;transform:translateX(-24px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rv-l.v{opacity:1;transform:translateX(0)}
+.rv-r{opacity:0;transform:translateX(24px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rv-r.v{opacity:1;transform:translateX(0)}
+
+/* TICKER */
+.ticker{background:linear-gradient(90deg,var(--brand),var(--brand2));padding:12px 0;overflow:hidden}
+.ttrack{display:flex;width:max-content;animation:tick 36s linear infinite}
+.titem{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--white);white-space:nowrap;padding:0 32px;display:flex;align-items:center;gap:16px}
+.titem::after{content:'★';font-size:8px;opacity:.5}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SCROLL TOP */
+#stb{position:fixed;bottom:70px;right:28px;width:44px;height:44px;background:var(--brand);border:none;border-radius:8px;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(10px);transition:all .3s;z-index:400}
+#stb.show{opacity:1;transform:translateY(0)}
+#stb:hover{background:var(--brand2);transform:translateY(-2px)}
+#stb svg{width:20px;height:20px;stroke:var(--white)}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .w{padding:0 32px}.nav-inner{padding:0 32px}
+  .hero-content{padding:0 32px;grid-template-columns:1fr;gap:40px}
+  .topbar-inner{padding:0 32px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .iso-grid{grid-template-columns:1fr 1fr}
+  .process-strip{grid-template-columns:1fr 1fr 1fr;gap:24px}
+  .process-strip::before{display:none}
+}
+@media(max-width:900px){
+  .nav-menu,.nav-actions .btn-outline{display:none}
+  .burger{display:flex}
+  .g2,.g2-wide,.g2-wide-rev{grid-template-columns:1fr}
+  .g3{grid-template-columns:1fr 1fr}
+  .principles{grid-template-columns:1fr}
+  .ppanel{display:block}
+  .ptabs .ptab:not(.active)+div{display:none}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .statbar{grid-template-columns:1fr 1fr}
+  .si:nth-child(2){border-right:none}
+  .si:nth-child(3){border-top:1px solid rgba(255,255,255,.08)}
+}
+@media(max-width:640px){
+  .w{padding:0 20px}.topbar-inner{padding:0 20px}
+  .s{padding:60px 0}
+  .g3,.g4{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}
+  .statbar{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .process-strip{grid-template-columns:1fr}
+  .iso-grid{grid-template-columns:1fr}
+  .ph{min-height:45vh}
+  .ph-full{min-height:75vh}
+  .topbar{display:none}
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PORTLANDERS — COMPREHENSIVE MOBILE RESPONSIVE CSS  v2
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── OVERFLOW HIDDEN on html & body (prevents horizontal scroll) ── */
+
+body { overflow-x: hidden; }
+
+/* ── LOGO SIZING — replace all inline styles ── */
+.nav-logo-img {
+  height: 120px !important;
+  width: auto !important;
+  max-width: 200px;
+  display: block;
+}
+.mob-logo-img {
+  height: 64px !important;
+  width: auto !important;
+  max-width: 200px;
+  display: block;
+}
+.foot-logo-img {
+  height: 80px !important;
+  width: auto !important;
+  max-width: 200px;
+  display: block;
+}
+
+/* Nav inner — keep logo from overflowing */
+.nav-inner { min-height: var(--nav-h); flex-wrap: nowrap; overflow: visible; }
+
+/* ── TABLET  641px–900px ── */
+@media (max-width: 900px) {
+  .hero-content  { grid-template-columns: 1fr; gap: 36px; }
+  .hero-card-grid { grid-template-columns: repeat(4, 1fr); }
+  .iso-grid      { grid-template-columns: repeat(2, 1fr); }
+  .g4            { grid-template-columns: repeat(2, 1fr); }
+  .statbar       { grid-template-columns: repeat(2, 1fr); }
+  .si:nth-child(2) { border-right: none; }
+  .si:nth-child(3) { border-top: 1px solid rgba(255,255,255,.08); }
+}
+
+/* ── MOBILE  ≤ 640px ── */
+@media (max-width: 640px) {
+
+  /* --- global wrappers --- */
+  body { overflow-x: hidden; }
+  .w          { padding: 0 18px; }
+  .s          { padding: 56px 0; }
+  .s-sm       { padding: 40px 0; }
+  .s-xs       { padding: 32px 0; }
+
+  /* --- nav --- */
+  :root { --nav-h: 68px; }
+  .nav-inner  { padding: 0 14px; gap: 8px; }
+  .topbar     { display: none; }
+  .nav-logo-img {
+    height: 90px !important;
+    max-width: 200px;
+  }
+  /* Tighter header actions on mobile */
+  .nav-actions { gap: 6px; }
+  /* Compact "Get a Quote" button padding on mobile */
+  .nav-actions .btn-brand {
+    padding: 9px 12px;
+    font-size: 12px;
+    gap: 5px;
+  }
+  .nav-actions .btn-brand svg { width: 13px; height: 13px; }
+  /* Slightly smaller theme toggle on mobile */
+  .dm-btn { width: 32px; height: 32px; }
+
+  /* --- hero (home page) --- */
+  .hero       { min-height: auto; padding: 72px 0 52px; }
+  .hero-content {
+    padding: 0 18px !important;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero h1    { font-size: clamp(30px, 8vw, 42px); }
+  .hero-sub   { font-size: 15px; max-width: 100%; }
+  .hero-btns  { flex-direction: column; align-items: stretch; }
+  .hero-btns .btn { justify-content: center; text-align: center; }
+  .hero-card  { padding: 20px 16px; }
+  .hero-card-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .hci        { padding: 14px 12px; }
+  .hci-num    { font-size: 30px; }
+  .hci-label  { font-size: 10px; }
+  .hci-pills  { padding: 12px; gap: 5px; }
+  .hci-pill   { font-size: 10px; padding: 3px 8px; }
+
+  /* --- stat bar --- */
+  .statbar    { grid-template-columns: 1fr 1fr; }
+  .si         { padding: 24px 14px; }
+  .sn         { font-size: clamp(28px, 7vw, 40px); }
+  .sl         { font-size: 11px; }
+
+  /* --- section headings --- */
+  h2.title    { font-size: clamp(24px, 6.5vw, 36px); }
+  h3.sub-title { font-size: clamp(18px, 5vw, 24px); }
+  .lead, .lead-light { font-size: 15px; }
+  .sh         { margin-bottom: 36px; }
+  .sh-center  { margin-bottom: 36px; }
+  .eyebrow    { font-size: 10px; }
+
+  /* --- page hero (inner pages) --- */
+  .ph         { min-height: 40vh; padding-bottom: 44px; }
+  .ph-full    { min-height: 68vh; }
+  .ph-content h1 { font-size: clamp(26px, 7vw, 42px) !important; max-width: 100% !important; }
+  .ph-content p  { font-size: 15px !important; max-width: 100% !important; }
+
+  /* --- ISO grid & cards --- */
+  .iso-grid   { grid-template-columns: 1fr; gap: 14px; }
+  .iso-card-top { padding: 18px 16px 0; }
+  .iso-num    { font-size: 26px; }
+  .iso-card-body { padding: 12px 16px 16px; }
+
+  /* --- principles tabs --- */
+  .principles { grid-template-columns: 1fr; }
+  .ptab       { padding: 16px 16px; gap: 10px; }
+  .ppanel     { padding: 22px 18px; }
+  .ppanel img { aspect-ratio: 16/9; }
+
+  /* --- service cards --- */
+  .svc-grid   { grid-template-columns: 1fr; }
+  .svc-card   { padding: 24px 20px; }
+  .svc-num    { font-size: 36px; }
+
+  /* --- process strip --- */
+  .process-strip { grid-template-columns: 1fr; gap: 28px; }
+  .process-strip::before { display: none; }
+  .ps-dot     { width: 52px; height: 52px; }
+  .ps-title   { font-size: 14px; }
+  .ps-text    { font-size: 12px; }
+
+  /* --- all grids collapse --- */
+  .g2, .g2-wide, .g2-wide-rev { grid-template-columns: 1fr; gap: 24px; }
+  .g3, .g4 { grid-template-columns: 1fr; gap: 18px; }
+
+  /* --- services numbered list rows --- */
+  [style*="grid-template-columns:52px 1fr"] {
+    grid-template-columns: 40px 1fr !important;
+    gap: 12px !important;
+    padding: 18px 0 !important;
+  }
+
+  /* --- timeline --- */
+  .timeline   { padding-left: 36px; }
+  .tl-body-inner { grid-template-columns: 1fr; }
+  .tl-header  { gap: 10px; flex-wrap: wrap; }
+  .tl-title   { font-size: 15px; }
+  .tl-step-num { font-size: 10px; }
+  .tl-dot     { left: -29px; top: 24px; width: 18px; height: 18px; }
+
+  /* --- team cards --- */
+  .tc-body    { padding: 18px 16px; }
+  .tc-name    { font-size: 18px; }
+
+  /* --- testimonials --- */
+  .testi      { padding: 22px 18px; }
+  .testi-text { font-size: 14px; }
+
+  /* --- form --- */
+  .form-wrap  { padding: 24px 18px; }
+  .frow       { grid-template-columns: 1fr; }
+  .finput, .ftextarea, .fsel { font-size: 16px; } /* prevents iOS zoom */
+
+  /* --- FAQ --- */
+  .faq-q      { font-size: 15px; gap: 12px; }
+  .faq-a-inner { font-size: 14px; }
+
+  /* --- CTA band --- */
+  .cta-band   { padding: 56px 0; }
+  .cta-band-content { padding: 0; max-width: 100%; }
+  .cta-band-content h2 { font-size: clamp(22px, 6vw, 34px); }
+  .cta-band-content p  { font-size: 15px; max-width: 100% !important; }
+  .cta-band-content > div { flex-direction: column; align-items: center; }
+  .cta-band-content .btn { width: 100%; justify-content: center; max-width: 320px; }
+
+  /* --- footer --- */
+  .foot-grid  { grid-template-columns: 1fr; gap: 32px; }
+  .foot-top   { padding: 48px 0 36px; }
+  .foot-desc  { max-width: 100%; font-size: 13px; }
+  .foot-bot   { flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+  .foot-leg   { flex-wrap: wrap; justify-content: center; gap: 14px; }
+  .foot-logo-img { height: 120px !important; }
+
+  /* --- sticky CTA --- */
+  .sticky-cta-inner {
+    padding: 0 16px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .sticky-cta p { min-width: unset; font-size: 13px; }
+  .sticky-cta-form { width: 100%; flex-direction: column; }
+  .sticky-input { width: 100%; font-size: 16px; }
+  .sticky-cta-form .btn { width: 100%; justify-content: center; }
+
+  /* --- cookie banner --- */
+  .cookie-banner { left: 12px; right: 12px; bottom: 60px; padding: 18px; }
+  .cookie-banner h4 { font-size: 14px; }
+  .cookie-banner p  { font-size: 12px; }
+
+  /* --- ISO benefit cards (ISO detail pages) --- */
+  .iso-benefit-card { padding: 14px 12px; gap: 10px; }
+
+  /* --- ticker --- */
+  .titem { font-size: 11px; padding: 0 18px; }
+
+  /* --- misc inline-style overrides that cause overflow --- */
+  [style*="max-width:520px"],
+  [style*="max-width:540px"],
+  [style*="max-width:700px"],
+  [style*="max-width:720px"],
+  [style*="max-width:500px"],
+  [style*="max-width:600px"] {
+    max-width: 100% !important;
+  }
+  [style*="gap:64px"] { gap: 28px !important; }
+  [style*="gap:60px"] { gap: 24px !important; }
+  [style*="gap:52px"] { gap: 20px !important; }
+
+  /* contact info row items */
+  [style*="padding:20px;border:1.5px solid var(--border)"] {
+    padding: 14px 12px !important;
+    gap: 12px !important;
+  }
+  /* about value badges */
+  [style*="padding:18px 16px;background:var(--off)"] {
+    padding: 12px 10px !important;
+  }
+
+  /* --- buttons --- */
+  .btn-lg { padding: 13px 24px; font-size: 14px; }
+  .btn-sm { padding: 8px 14px; font-size: 12px; }
+}
+
+/* ── VERY SMALL  ≤ 380px ── */
+@media (max-width: 380px) {
+  .w           { padding: 0 14px; }
+  .hero h1     { font-size: 28px; }
+  h2.title     { font-size: 22px; }
+  .hci-num     { font-size: 26px; }
+  .sn          { font-size: 26px; }
+  .nav-logo-img { height: 90px !important; max-width: 180px; }
+  .btn-lg      { padding: 11px 18px; font-size: 13px; }
+  .foot-logo-img { height: 100px !important; }
+  .mob-logo-img  { height: 64px !important; }
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   DARK MODE INLINE-STYLE OVERRIDES  (page hero h1, sub-paragraphs)
+   ══════════════════════════════════════════════════════════════ */
+
+/* Page hero h1 — sits on navy bg, must stay light in both modes */
+[data-theme="dark"] .ph-content h1,
+[data-theme="dark"] .ph-content [style*="color:var(--white)"],
+[data-theme="dark"] .ph-content [style*="color:rgba(255,255,255"] { color: #F0F0F0 !important; }
+
+/* Page hero subtext paragraphs */
+[data-theme="dark"] .ph-content p,
+[data-theme="dark"] .ph-content [style*="color:rgba(255,255,255"] { color: rgba(240,240,240,.75) !important; }
+
+/* Navy-bg CTA sections with inline rgba white text */
+[data-theme="dark"] [style*="background:var(--navy)"] [style*="color:rgba(255,255,255"],
+[data-theme="dark"] [style*="background:var(--navy)"] [style*="color:var(--white)"] { color: rgba(240,240,240,.85) !important; }
+
+/* ISO page expert box — sits on navy */
+[data-theme="dark"] .iso-expert-box p,
+[data-theme="dark"] .iso-expert-box [style*="color:rgba(255,255,255"] { color: rgba(240,240,240,.75) !important; }
+
+/* Dark section inline-white text — covers all s-dark, cta-band, navy sections */
+[data-theme="dark"] .s-dark [style*="color:rgba(255,255,255"],
+[data-theme="dark"] .s-dark [style*="color:var(--white)"],
+[data-theme="dark"] section[style*="background:var(--navy)"] [style*="color:rgba(255,255,255"],
+[data-theme="dark"] section[style*="background:var(--navy)"] [style*="color:var(--white)"] { color: rgba(240,240,240,.8) !important; }
+
+/* Services page "Ready to begin?" inline heading */
+[data-theme="dark"] [style*="color:var(--white)"] { color: #F0F0F0 !important; }
+
+/* Privacy page contact details */
+[data-theme="dark"] [style*="color:rgba(255,255,255,.6)"] { color: rgba(240,240,240,.65) !important; }
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE OVERFLOW FIXES
+   ══════════════════════════════════════════════════════════════ */
+
+/* 1. Mega menu — 560px wide, causes overflow on mobile (it's hidden on mobile anyway) */
+@media (max-width: 900px) {
+  .mega { display: none !important; }
+}
+
+/* 2. Ticker track — width:max-content scrolls beyond viewport */
+.ticker { overflow: hidden !important; max-width: 100vw; }
+.ttrack { will-change: transform; }
+
+/* 3. Sticky CTA inner — padding:0 48px causes overflow on small screens */
+@media (max-width: 640px) {
+  .sticky-cta-inner { padding: 0 16px !important; max-width: 100%; }
+  .sticky-input { width: 100% !important; min-width: 0 !important; }
+}
+
+/* 4. Wrapper — ensure no horizontal overflow leaks */
+.w { box-sizing: border-box; max-width: 100%; }
+
+/* 5. Nav links and buttons — white-space:nowrap can push layout wide */
+@media (max-width: 640px) {
+  .btn { white-space: normal; }
+}
+
+/* 6. Images — ensure none exceed container */
+img { max-width: 100%; height: auto; }
+
+/* 7. Scroll reveal animations — translateX causes temporary overflow */
+.rv-l, .rv-r { overflow-x: clip; }
+
+/* 8. g2-wide inline gap:64px override on mobile */
+@media (max-width: 640px) {
+  .g2-wide, .g2-wide-rev { gap: 24px !important; }
+}
+
+/* ── Safe-area insets (iPhone home bar & notch) ── */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .sticky-cta  { padding-bottom: calc(14px + env(safe-area-inset-bottom)); }
+  .mob-nav     { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
+}
+</style>
+<style>
+/* ── DARK MODE ── */
+[data-theme="dark"] {
+  --navy:#0A1628;--navy2:#0D1F3C;
+  --white:#121212;--off:#1A1A1A;--off2:#222222;
+  --border:#2A2A2A;--border2:#333333;
+  --text:#E8E8E8;--muted:#A0A0A0;--light-muted:#666666;
+  --brand-lt:rgba(232,146,10,.15);
+  --teal-lt:rgba(0,169,157,.15);
+}
+
+/* ── NAV & HEADER ── */
+[data-theme="dark"] #nav { background:rgba(18,18,18,.97) !important; border-color:#2a2a2a; }
+[data-theme="dark"] .mega { background:#1a1a1a; border-color:#2a2a2a; }
+[data-theme="dark"] .mega-link { color:var(--muted); }
+[data-theme="dark"] .mega-link:hover { background:rgba(232,146,10,.15); color:var(--brand); }
+[data-theme="dark"] .mega-link:hover::before { background:var(--brand); }
+[data-theme="dark"] .nav-link:hover, [data-theme="dark"] .nav-link.active { background:rgba(232,146,10,.15); color:var(--brand); }
+[data-theme="dark"] .mob-nav { background:#121212; }
+[data-theme="dark"] .mob-link { color:var(--text); border-color:#2a2a2a; }
+[data-theme="dark"] .mob-link:hover { color:var(--brand); background:rgba(232,146,10,.15); }
+[data-theme="dark"] .mob-close { color:var(--muted); border-color:#2a2a2a; }
+[data-theme="dark"] .topbar { background:#0a0a0a; }
+[data-theme="dark"] .burger span { background:var(--text); }
+
+/* ── BUTTONS ── */
+[data-theme="dark"] .btn-outline { color:var(--text); border-color:var(--border2); }
+[data-theme="dark"] .btn-outline:hover { background:rgba(232,146,10,.2); color:var(--brand); border-color:var(--brand); }
+[data-theme="dark"] .btn-ghost-light:hover { background:rgba(255,255,255,.12); color:var(--white); }
+
+/* ── PRINCIPLE TABS ── */
+[data-theme="dark"] .principles { background:#1a1a1a; border-color:#2a2a2a; }
+[data-theme="dark"] .ptab { border-color:#2a2a2a; }
+[data-theme="dark"] .ptab.active, [data-theme="dark"] .ptab:hover { background:#222; }
+[data-theme="dark"] .ptab-icon { background:#2a2a2a; }
+[data-theme="dark"] .ptab.active .ptab-icon, [data-theme="dark"] .ptab:hover .ptab-icon { background:rgba(232,146,10,.15); }
+[data-theme="dark"] .ppanel { background:#222; }
+
+/* ── SERVICE CARDS ── */
+[data-theme="dark"] .svc-card { background:#1a1a1a; }
+[data-theme="dark"] .svc-card:hover { background:#222; }
+
+/* ── ISO CARDS ── */
+[data-theme="dark"] .iso-card { background:#1a1a1a; border-color:#2a2a2a; }
+
+/* ── PROCESS STEPS ── */
+[data-theme="dark"] .ps-dot { background:#1a1a1a; border-color:var(--brand); }
+[data-theme="dark"] .ps-num { background:var(--brand); color:#fff; }
+[data-theme="dark"] .ps-item:hover .ps-dot { background:var(--brand); }
+[data-theme="dark"] .ps-item:hover .ps-dot svg { stroke:#fff; }
+
+/* ── TEAM CARDS ── */
+[data-theme="dark"] .tc { background:#1a1a1a; border-color:#2a2a2a; }
+[data-theme="dark"] .cert { background:rgba(232,146,10,.15); color:var(--brand); border-color:rgba(232,146,10,.3); }
+
+/* ── TESTIMONIALS ── */
+[data-theme="dark"] .testi { background:#1a1a1a; border-color:#2a2a2a; }
+
+/* ── FORM ── */
+[data-theme="dark"] .form-wrap { background:#1a1a1a; border-color:#2a2a2a; }
+[data-theme="dark"] .finput, [data-theme="dark"] .ftextarea, [data-theme="dark"] .fsel { background:#222; border-color:#333; color:#e8e8e8; }
+[data-theme="dark"] .finput:focus, [data-theme="dark"] .ftextarea:focus, [data-theme="dark"] .fsel:focus { background:#2a2a2a; border-color:var(--brand); }
+[data-theme="dark"] .finput::placeholder, [data-theme="dark"] .ftextarea::placeholder { color:var(--light-muted); }
+
+/* ── FAQ ── */
+[data-theme="dark"] .faq-item { border-color:#2a2a2a; }
+[data-theme="dark"] .faq-icon { background:#2a2a2a; border-color:#333; }
+[data-theme="dark"] .faq-icon svg { stroke:var(--muted); }
+[data-theme="dark"] .faq-item.open .faq-icon { background:var(--brand); border-color:var(--brand); }
+[data-theme="dark"] .faq-item.open .faq-icon svg { stroke:#fff; }
+
+/* ── HERO CARD ── */
+[data-theme="dark"] .hero-card { background:rgba(255,255,255,.04); }
+
+/* ── STAT BAR ── */
+[data-theme="dark"] .sn { color:var(--brand); }
+[data-theme="dark"] .si:hover .sn { color:#FF6B1A; }
+
+/* ── TIMELINE ── */
+[data-theme="dark"] .tl-item { border-color:#2a2a2a; }
+[data-theme="dark"] .tl-dot { background:#1a1a1a; border-color:#333; }
+[data-theme="dark"] .tl-item.open .tl-dot, [data-theme="dark"] .tl-item:hover .tl-dot { background:var(--brand); border-color:var(--brand); }
+[data-theme="dark"] .tl-duration { background:rgba(0,169,157,.15); color:var(--teal); }
+
+/* ── ISO BENEFIT CARDS ── */
+[data-theme="dark"] .iso-benefit-card { background:#1a1a1a; border-color:#2a2a2a; }
+
+/* ── HERO (OPACITY TWEAKS) ── */
+[data-theme="dark"] .iso-page-hero { filter:brightness(.9); }
+
+/* ── FOOTER ── */
+[data-theme="dark"] footer { background:#0a0a0a; }
+
+/* ── COOKIE BANNER ── */
+[data-theme="dark"] .cookie-banner { background:#1a1a1a; border-color:#2a2a2a; }
+[data-theme="dark"] .cookie-banner h4 { color:var(--text); }
+[data-theme="dark"] .cookie-banner p { color:var(--muted); }
+[data-theme="dark"] .cookie-decline { color:var(--text); border-color:#333; }
+[data-theme="dark"] .cookie-decline:hover { border-color:var(--muted); color:var(--text); }
+
+/* ── DARK MODE TOGGLE ICONS ── */
+[data-theme="dark"] .dm-sun { display:flex !important; }
+[data-theme="dark"] .dm-moon { display:none !important; }
+
+/* ══════════════════════════════════════════════════════
+   DARK MODE COLOUR FIXES
+   ══════════════════════════════════════════════════════ */
+
+/* Core fix: --white is #121212 in dark mode, so re-map
+   "light" text classes to a proper light colour instead */
+[data-theme="dark"] {
+  --true-white: #F0F0F0;   /* used anywhere text must stay light */
+}
+
+/* Headings & text that use var(--white) for light-on-dark contexts */
+[data-theme="dark"] h2.title-light,
+[data-theme="dark"] h3.sub-title-light,
+[data-theme="dark"] .lead-light,
+[data-theme="dark"] .ph-content,
+[data-theme="dark"] .ph-content h1,
+[data-theme="dark"] .ph-content p,
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .hero-sub,
+[data-theme="dark"] .s-dark h2,
+[data-theme="dark"] .s-dark h3,
+[data-theme="dark"] .s-dark p,
+[data-theme="dark"] .s-dark .lead,
+[data-theme="dark"] .cta-band h2,
+[data-theme="dark"] .cta-band p,
+[data-theme="dark"] .titem,
+[data-theme="dark"] .ticker { color: #F0F0F0; }
+
+/* Process strip titles that have inline style="color:var(--white)" */
+[data-theme="dark"] .ps-title { color: #F0F0F0 !important; }
+
+/* Stat bar labels */
+[data-theme="dark"] .sl { color: rgba(240,240,240,.6); }
+
+/* Nav links — default state in dark mode must be light, not inherit */
+[data-theme="dark"] .nav-link { color: #E8E8E8; }
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active { color: var(--brand); background: rgba(232,146,10,.15); }
+
+/* Mega menu links default state */
+[data-theme="dark"] .mega-link { color: #A0A0A0; }
+[data-theme="dark"] .mega-link:hover { color: var(--brand); }
+
+/* Mobile nav links */
+[data-theme="dark"] .mob-link { color: #E8E8E8; }
+[data-theme="dark"] .mob-sub-link { color: #A0A0A0; }
+
+/* Footer links hover — var(--white) is near-black in dark, so override */
+[data-theme="dark"] .foot-links a { color: rgba(240,240,240,.55); }
+[data-theme="dark"] .foot-links a:hover { color: #F0F0F0; }
+[data-theme="dark"] .foot-leg a { color: rgba(240,240,240,.6); }
+[data-theme="dark"] .foot-leg a:hover { color: rgba(240,240,240,.8); }
+[data-theme="dark"] .foot-col-title { color: #E8E8E8; }
+
+/* Hero card */
+[data-theme="dark"] .hci-label { color: rgba(240,240,240,.55); }
+[data-theme="dark"] .hci-pill { color: rgba(240,240,240,.7); background: rgba(255,255,255,.06); }
+
+/* Section headings (var(--text) is fine but ensure it's not overridden) */
+[data-theme="dark"] h2.title { color: #E8E8E8; }
+[data-theme="dark"] h3.sub-title { color: #E8E8E8; }
+[data-theme="dark"] .lead { color: #A0A0A0; }
+[data-theme="dark"] .eyebrow { color: var(--brand); }
+
+/* Principles panel */
+[data-theme="dark"] .ptab-title { color: #E8E8E8; }
+[data-theme="dark"] .ptab-text { color: #A0A0A0; }
+[data-theme="dark"] .ppanel h3 { color: #E8E8E8; }
+[data-theme="dark"] .ppanel p { color: #A0A0A0; }
+
+/* Service cards */
+[data-theme="dark"] .svc-title { color: #E8E8E8; }
+[data-theme="dark"] .svc-text { color: #A0A0A0; }
+[data-theme="dark"] .svc-num { color: rgba(232,146,10,.2); }
+
+/* ISO cards */
+[data-theme="dark"] .iso-card-title { color: #E8E8E8; }
+[data-theme="dark"] .iso-card-text { color: #A0A0A0; }
+[data-theme="dark"] .iso-num { color: rgba(232,146,10,.25); }
+
+/* Process strip */
+[data-theme="dark"] .ps-text { color: #A0A0A0; }
+
+/* Testimonials */
+[data-theme="dark"] .testi-text { color: #E8E8E8; }
+[data-theme="dark"] .testi-name { color: #E8E8E8; }
+[data-theme="dark"] .testi-role { color: #A0A0A0; }
+
+/* FAQ */
+[data-theme="dark"] .faq-q { color: #E8E8E8; }
+[data-theme="dark"] .faq-a-inner { color: #A0A0A0; }
+
+/* Timeline */
+[data-theme="dark"] .tl-title { color: #E8E8E8; }
+[data-theme="dark"] .tl-text { color: #A0A0A0; }
+
+/* ISO benefit cards (ISO detail pages) */
+[data-theme="dark"] .iso-benefit-title { color: #E8E8E8; }
+[data-theme="dark"] .iso-benefit-text { color: #A0A0A0; }
+
+/* General links in body content */
+[data-theme="dark"] a { color: inherit; }
+[data-theme="dark"] p a,
+[data-theme="dark"] li a { color: var(--brand); }
+[data-theme="dark"] p a:hover,
+[data-theme="dark"] li a:hover { color: #FF9E2C; }
+
+/* Sticky CTA */
+[data-theme="dark"] .sticky-cta { background: #1a1a1a; border-color: #2a2a2a; }
+[data-theme="dark"] .sticky-cta p { color: #E8E8E8; }
+
+/* Topbar text */
+[data-theme="dark"] .topbar-link { color: rgba(240,240,240,.6); }
+[data-theme="dark"] .topbar-link:hover { color: #F0F0F0; }
+
+
+/* ── DARK MODE TOGGLE BUTTON ── */
+.dm-btn {
+  display:flex; align-items:center; justify-content:center;
+  width:36px; height:36px; border-radius:8px;
+  background:var(--off2); border:1.5px solid var(--border);
+  cursor:pointer; transition:all .2s; flex-shrink:0;
+}
+.dm-btn:hover { border-color:var(--brand); background:rgba(232,146,10,.1); }
+.dm-moon, .dm-sun { width:16px; height:16px; stroke:var(--muted); }
+.dm-sun { display:none; }
+
+/* ── STICKY CTA BAR ── */
+.sticky-cta {
+  position:fixed; bottom:0; left:0; right:0; z-index:800;
+  background:var(--navy); border-top:3px solid var(--brand);
+  padding:14px 0; transform:translateY(100%);
+  transition:transform .4s cubic-bezier(.4,0,.2,1);
+  box-shadow:0 -8px 32px rgba(0,0,0,.2);
+}
+.sticky-cta.show { transform:translateY(0); }
+.sticky-cta-inner {
+  max-width:1280px; margin:0 auto; padding:0 48px;
+  display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+}
+.sticky-cta p {
+  font-size:14px; font-weight:600; color:rgba(255,255,255,.85);
+  flex:1; min-width:200px;
+}
+.sticky-cta p span { color:var(--brand); }
+.sticky-cta-form {
+  display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+}
+.sticky-input {
+  font-family:'Inter',sans-serif; font-size:14px;
+  background:rgba(255,255,255,.08); border:1.5px solid rgba(255,255,255,.15);
+  border-radius:6px; padding:9px 14px; color:#fff; outline:none;
+  width:200px; transition:border-color .2s;
+}
+.sticky-input::placeholder { color:rgba(255,255,255,.35); }
+.sticky-input:focus { border-color:var(--brand); }
+.sticky-cta-close {
+  background:none; border:none; color:rgba(255,255,255,.4);
+  font-size:20px; cursor:pointer; padding:4px 8px;
+  transition:color .2s; line-height:1;
+}
+.sticky-cta-close:hover { color:#fff; }
+
+/* ── COOKIE BANNER ── */
+.cookie-banner {
+  position:fixed; bottom:80px; left:24px; right:24px;
+  max-width:520px; background:var(--white);
+  border:1.5px solid var(--border); border-radius:12px;
+  padding:24px; box-shadow:0 16px 48px rgba(0,0,0,.15);
+  z-index:900; transform:translateY(20px); opacity:0;
+  transition:all .4s cubic-bezier(.4,0,.2,1);
+  pointer-events:none;
+}
+.cookie-banner.show { transform:translateY(0); opacity:1; pointer-events:all; }
+.cookie-banner h4 {
+  font-family:'Poppins',sans-serif; font-size:15px;
+  font-weight:700; margin-bottom:8px; display:flex;
+  align-items:center; gap:8px;
+}
+.cookie-banner p { font-size:13px; color:var(--muted); line-height:1.65; margin-bottom:16px; }
+.cookie-banner a { color:var(--brand); }
+.cookie-btns { display:flex; gap:10px; flex-wrap:wrap; }
+.cookie-accept {
+  font-size:12.5px; font-weight:700; letter-spacing:.04em;
+  background:var(--brand); color:#fff; border:none;
+  border-radius:6px; padding:9px 20px; cursor:pointer;
+  transition:background .2s;
+}
+.cookie-accept:hover { background:var(--brand2); }
+.cookie-decline {
+  font-size:12.5px; font-weight:600; color:var(--muted);
+  background:none; border:1.5px solid var(--border2);
+  border-radius:6px; padding:9px 16px; cursor:pointer;
+  transition:all .2s;
+}
+.cookie-decline:hover { border-color:var(--muted); color:var(--text); }
+
+/* ── MICRO ANIMATIONS ── */
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+@keyframes slideInLeft { from{opacity:0;transform:translateX(-30px)} to{opacity:1;transform:translateX(0)} }
+@keyframes slideInRight { from{opacity:0;transform:translateX(30px)} to{opacity:1;transform:translateX(0)} }
+@keyframes scaleIn { from{opacity:0;transform:scale(.95)} to{opacity:1;transform:scale(1)} }
+@keyframes countUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+
+.rv { animation-fill-mode:both; }
+.rv.v { animation:fadeUp .65s cubic-bezier(.4,0,.2,1) both; }
+.rv-l.v { animation:slideInLeft .65s cubic-bezier(.4,0,.2,1) both; }
+.rv-r.v { animation:slideInRight .65s cubic-bezier(.4,0,.2,1) both; }
+
+/* card hover lifts */
+.iso-card, .svc-card, .tc, .testi, .ptab {
+  will-change:transform;
+}
+.iso-card:hover { transform:translateY(-6px) scale(1.01); }
+.tc:hover { transform:translateY(-6px); }
+.testi:hover { transform:translateY(-3px); }
+
+/* button press */
+.btn:active { transform:scale(.97) !important; }
+
+/* nav link underline animate */
+.nav-link::after {
+  transition:transform .22s cubic-bezier(.4,0,.2,1),opacity .22s;
+  opacity:0;
+}
+.nav-link:hover::after, .nav-link.active::after { opacity:1; }
+
+/* image lazy zoom */
+.img-zoom { overflow:hidden; border-radius:10px; }
+.img-zoom img { transition:transform .6s cubic-bezier(.4,0,.2,1); }
+.img-zoom:hover img { transform:scale(1.04); }
+
+/* stat number pop */
+.sn { transition:color .3s; }
+.si:hover .sn { color:#FF6B1A; }
+
+/* ISO page specific */
+.iso-page-feature {
+  width:100%; aspect-ratio:16/9; object-fit:cover;
+  border-radius:12px; margin-bottom:24px;
+}
+.iso-benefit-card {
+  background:var(--off); border:1.5px solid var(--border);
+  border-radius:8px; padding:18px 16px;
+  display:flex; gap:12px; align-items:flex-start;
+  transition:border-color .2s, transform .2s;
+}
+.iso-benefit-card:hover { border-color:var(--brand); transform:translateY(-2px); }
+.iso-benefit-icon {
+  width:36px; height:36px; border-radius:6px;
+  background:rgba(232,146,10,.1); display:flex;
+  align-items:center; justify-content:center; flex-shrink:0;
+}
+
+/* ── INTERACTIVE TIMELINE ── */
+.timeline { position:relative; padding-left:48px; }
+.timeline::before {
+  content:''; position:absolute; left:18px; top:0; bottom:0;
+  width:2px; background:linear-gradient(to bottom, var(--brand), var(--teal));
+}
+.tl-item {
+  position:relative; margin-bottom:0; cursor:pointer;
+  border-bottom:1px solid var(--border);
+}
+.tl-item:last-child { border-bottom:none; }
+.tl-dot {
+  position:absolute; left:-39px; top:28px;
+  width:22px; height:22px; border-radius:50%;
+  background:var(--white); border:2.5px solid var(--border2);
+  transition:all .3s; display:flex; align-items:center;
+  justify-content:center; z-index:1;
+}
+.tl-item.open .tl-dot,
+.tl-item:hover .tl-dot {
+  background:var(--brand); border-color:var(--brand);
+  box-shadow:0 0 0 4px rgba(232,146,10,.2);
+}
+.tl-dot svg { width:10px; height:10px; stroke:#fff; opacity:0; transition:opacity .2s; }
+.tl-item.open .tl-dot svg { opacity:1; }
+.tl-header {
+  padding:24px 16px 24px 0;
+  display:flex; align-items:center; gap:16px;
+}
+.tl-step-num {
+  font-size:11px; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--brand);
+  background:rgba(232,146,10,.1); padding:4px 10px;
+  border-radius:4px; white-space:nowrap; flex-shrink:0;
+}
+.tl-title {
+  font-family:'Poppins',sans-serif; font-size:17px;
+  font-weight:700; color:var(--text); flex:1;
+  transition:color .2s;
+}
+.tl-item.open .tl-title, .tl-item:hover .tl-title { color:var(--brand); }
+.tl-chevron {
+  width:20px; height:20px; stroke:var(--light-muted);
+  transition:transform .3s, stroke .2s; flex-shrink:0;
+}
+.tl-item.open .tl-chevron { transform:rotate(180deg); stroke:var(--brand); }
+.tl-body {
+  max-height:0; overflow:hidden;
+  transition:max-height .4s cubic-bezier(.4,0,.2,1), padding .3s;
+  padding:0 16px 0 0;
+}
+.tl-item.open .tl-body { max-height:400px; padding-bottom:28px; }
+.tl-body-inner { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.tl-desc { font-size:15px; color:var(--muted); line-height:1.75; }
+.tl-deliverables { }
+.tl-del-title {
+  font-size:11px; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--brand); margin-bottom:10px;
+}
+.tl-del-list { display:flex; flex-direction:column; gap:7px; }
+.tl-del-item {
+  font-size:13.5px; color:var(--muted);
+  display:flex; gap:8px; align-items:flex-start;
+}
+.tl-del-item::before {
+  content:''; display:block; width:5px; height:5px;
+  border-radius:50%; background:var(--brand);
+  margin-top:6px; flex-shrink:0;
+}
+.tl-duration {
+  display:inline-flex; align-items:center; gap:5px;
+  font-size:11.5px; font-weight:600; color:var(--teal);
+  background:var(--teal-lt); padding:3px 10px; border-radius:4px;
+  margin-bottom:10px;
+}
+@media(max-width:640px) {
+  .tl-body-inner { grid-template-columns:1fr; }
+  .sticky-cta-inner { padding:0 20px; }
+  .sticky-cta-form { width:100%; }
+  .sticky-input { width:100%; }
+  .cookie-banner { left:16px; right:16px; bottom:70px; }
+}
+</style>
+<script>
+/* INSTANT THEME — runs before render, prevents flash */
+(function(){
+  var t = localStorage.getItem('theme');
+  if (t) document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <div class="topbar-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+        <a href="tel:+2348077733324">+234 807 773 3324</a>
+      </div>
+      <div class="topbar-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:info@portlandersservices.com">info@portlandersservices.com</a>
+      </div>
+      <div class="topbar-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Lagos, Nigeria
+      </div>
+    </div>
+    <div class="topbar-right topbar-social">
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+    </div>
+  </div>
+</div>
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="/"><img src="images/Portlanders-03.png" alt="Portlanders Services" class="nav-logo-img"/></a>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+      <li class="nav-item">
+        <a href="/iso" class="nav-link">ISO Standards <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="mega">
+          <div class="mega-title">Popular Frameworks</div>
+          <div class="mega-grid">
+            <a href="/iso-9001" class="mega-link">9001 – Quality Management</a>
+            <a href="/iso-27001" class="mega-link">27001 – Information Security</a>
+            <a href="/iso-45001" class="mega-link">45001 – Health &amp; Safety</a>
+            <a href="/iso-14001" class="mega-link">14001 – Environmental</a>
+            <a href="/iso-37001" class="mega-link">37001 – Anti-Bribery</a>
+            <a href="/iso-22301" class="mega-link">22301 – Business Continuity</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="/services" class="nav-link">Our Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="mega">
+          <div class="mega-title">Services</div>
+          <div class="mega-grid">
+            <a href="/services#mgmt" class="mega-link">Management System Consulting</a>
+            <a href="/services#eng" class="mega-link">Engineering &amp; ICT Consulting</a>
+            <a href="/services#risk" class="mega-link">Risk &amp; Compliance</a>
+            <a href="/services#audit" class="mega-link">Internal Audits &amp; Gap Analysis</a>
+            <a href="/services#process" class="mega-link">Our 6-Step Process</a>
+            <a href="/services#training" class="mega-link">Training &amp; Awareness</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="dm-btn" id="dm-btn" aria-label="Toggle dark mode">
+        <svg class="dm-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <svg class="dm-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="/contact" class="btn btn-brand">Get a Quote <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mob-nav" id="mob-nav">
+  <div class="mob-nav-head">
+    <img src="images/Portlanders-03.png" alt="Portlanders Services" class="mob-logo-img"/>
+    <button class="mob-close" id="mob-close">&times;</button>
+  </div>
+  <div class="mob-links">
+    <a href="/" class="mob-link">Home</a>
+    <a href="/iso" class="mob-link">ISO Standards</a>
+    <a href="/services" class="mob-link">Our Services</a>
+    <a href="/about" class="mob-link">About Us</a>
+    <a href="/privacy" class="mob-link">Privacy Policy</a>
+  </div>
+  <div class="mob-actions">
+    <a href="/contact" class="btn btn-brand" style="justify-content:center;width:100%">Get a Quote →</a>
+  </div>
+</div>
+
+<section class="ph">
+  <img class="ph-bg" src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=1600&q=85&fit=crop" alt="Professional team"/>
+  <div class="ph-ov"></div>
+  <div class="w ph-content" style="padding-bottom:72px">
+    <div class="bc"><a href="/">Home</a><sep>›</sep>About Us</div>
+    <h1 style="font-family:var(--head);font-size:clamp(38px,5vw,64px);font-weight:800;color:var(--white);max-width:700px;line-height:1.1;margin-bottom:16px">About <span style="color:var(--brand)">Portlanders Services</span></h1>
+    <p style="font-size:18px;font-weight:400;color:rgba(255,255,255,.65);max-width:540px">Fixed fee. Trouble free. World class ISO consulting for organisations across Nigeria and Africa.</p>
+  </div>
+</section>
+
+<section class="s">
+  <div class="w">
+    <div class="g2-wide">
+      <div class="rv-l">
+        <div class="eyebrow">Our Story</div>
+        <h2 class="title" style="margin-bottom:20px">Delivering <em>world-class</em> ISO consultation</h2>
+        <p class="body-text" style="margin-bottom:18px">Portlanders Services is a professional consulting firm providing specialised services in Management Systems and Engineering Consulting across multiple industries in Nigeria and beyond.</p>
+        <p class="body-text" style="margin-bottom:18px">We partner with organizations to deliver management systems, consulting and engineering solutions. Our services combine technical expertise, project management and operational excellence to deliver successful management system implementation and certification to the requirements of ISO 9001, ISO 14001, ISO 45001, ISO 22301 and ISO/IEC 27001 as well as turnkey engineering and project delivery solutions.</p>
+        <p class="body-text" style="margin-bottom:18px">Founded by professionals who have spent their careers inside the very institutions that shape Nigeria's standards ecosystem, we bring unmatched practical experience to every engagement. Our Principal Consultant spent over 23 years at the Standards Organisation of Nigeria (SON) — the national body responsible for standardisation, metrology, testing, and quality.</p>
+        <p class="body-text" style="margin-bottom:32px">We understand not just what the standards require — we understand how they're applied, audited, and maintained in real Nigerian and African business environments.</p>
+        <div class="g2" style="gap:16px">
+          <div style="padding:18px 16px;background:var(--off);border-radius:8px;border-left:3px solid var(--brand)"><div style="font-family:var(--head);font-size:13px;font-weight:700;color:var(--text)">Hassle Free Service</div></div><div style="padding:18px 16px;background:var(--off);border-radius:8px;border-left:3px solid var(--brand)"><div style="font-family:var(--head);font-size:13px;font-weight:700;color:var(--text)">Detail Orientated</div></div><div style="padding:18px 16px;background:var(--off);border-radius:8px;border-left:3px solid var(--brand)"><div style="font-family:var(--head);font-size:13px;font-weight:700;color:var(--text)">Reliable Delivery</div></div><div style="padding:18px 16px;background:var(--off);border-radius:8px;border-left:3px solid var(--brand)"><div style="font-family:var(--head);font-size:13px;font-weight:700;color:var(--text)">Continuous Improvement</div></div><div style="padding:18px 16px;background:var(--off);border-radius:8px;border-left:3px solid var(--brand)"><div style="font-family:var(--head);font-size:13px;font-weight:700;color:var(--text)">Client Focused</div></div><div style="padding:18px 16px;background:var(--off);border-radius:8px;border-left:3px solid var(--brand)"><div style="font-family:var(--head);font-size:13px;font-weight:700;color:var(--text)">Practical Implementation</div></div>
+        </div>
+      </div>
+      <div class="rv-r">
+        <img src="images/ISO6.jpg" alt="Portlanders Services Office" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;margin-bottom:16px"/>
+        <div style="background:var(--navy);border-radius:8px;padding:24px;color:var(--white)">
+          <p style="font-family:var(--head);font-size:17px;font-style:italic;line-height:1.6;color:rgba(255,255,255,.85)">"We don't just help you get certified — we build the internal capability to sustain excellence on your own."</p>
+          <p style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-top:14px">Portlanders Services</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION/VISION/VALUES -->
+<section class="s s-off">
+  <div class="w">
+    <div class="sh-center rv">
+      <div class="eyebrow eyebrow-c">Our Foundation</div>
+      <h2 class="title">Mission, Vision <em>&amp; Values</em></h2>
+    </div>
+    <div class="g3">
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:32px 28px;transition:box-shadow .3s" class="rv" onmouseover="this.style.boxShadow='0 16px 48px rgba(0,0,0,.1)'" onmouseout="this.style.boxShadow='none'">
+        <div style="width:48px;height:48px;background:rgba(232,146,10,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3 style="font-family:var(--head);font-size:20px;font-weight:700;margin-bottom:12px">Our Mission</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75">Empowering organisations across Nigeria and Africa to optimise performance and achieve sustainable growth through specialised, practical management systems consulting.</p>
+      </div><div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:32px 28px;transition:box-shadow .3s" class="rv" onmouseover="this.style.boxShadow='0 16px 48px rgba(0,0,0,.1)'" onmouseout="this.style.boxShadow='none'">
+        <div style="width:48px;height:48px;background:rgba(232,146,10,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3 style="font-family:var(--head);font-size:20px;font-weight:700;margin-bottom:12px">Our Vision</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75">To be Nigeria's most trusted partner for ISO certification and management systems — known for technical excellence, honest advice, and results that last.</p>
+      </div><div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:32px 28px;transition:box-shadow .3s" class="rv" onmouseover="this.style.boxShadow='0 16px 48px rgba(0,0,0,.1)'" onmouseout="this.style.boxShadow='none'">
+        <div style="width:48px;height:48px;background:rgba(232,146,10,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h3 style="font-family:var(--head);font-size:20px;font-weight:700;margin-bottom:12px">Our Values</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75">Hassle free service. Detail orientated. Succinct. Reliable. Committed to continuous improvement. Embracing innovation to provide cutting-edge consulting solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="s">
+  <div class="w">
+    <div class="sh rv" style="max-width:600px">
+      <div class="eyebrow">Our People</div>
+      <h2 class="title" style="margin-bottom:14px">Expert consultants.<br/><em>Real credentials.</em></h2>
+      <p class="lead">Two principals. Decades of combined hands-on experience across standards, engineering, and information security.</p>
+    </div>
+    <div class="g2">
+      <div class="tc rv rv-l">
+        <img class="tc-photo" src="images/mrs-samuel.jpg" alt="Mosunmola Samuel"/>
+        <div class="tc-body">
+          <div class="tc-name">Mosunmola Samuel</div>
+          <div class="tc-role">Principal Consultant — Management Systems</div>
+          <p class="tc-bio">Over 23 years of experience in quality management systems, information security, standardisation, and regulatory compliance. Former Assistant Director at the Standards Organisation of Nigeria (SON) and former Board Member of the Lagos State Consumer Protection Agency.</p>
+          <p class="tc-bio" style="margin-top:10px">Certified across multiple ISO standards by BSI Group, PECB, and other internationally recognised bodies. Deep experience in AFRAC and ECOWAS harmonisation programmes.</p>
+          <div class="cert-row">
+            <span class="cert">ISO 9001 Lead Auditor</span><span class="cert">ISO 27001:2022</span>
+            <span class="cert">ISO 45001</span><span class="cert">ISO 14001</span>
+            <span class="cert">ISO 37001</span><span class="cert">ISO 22301</span>
+            <span class="cert">BSI Group</span><span class="cert">PECB</span>
+          </div>
+        </div>
+      </div>
+      <div class="tc rv rv-r">
+        <img class="tc-photo" src="images/principal2.jpg" alt="Adegbiji Babatomiwa"/>
+        <div class="tc-body">
+          <div class="tc-name">Adegbiji Babatomiwa</div>
+          <div class="tc-role">IT &amp; Data Analytics Consultant</div>
+          <p class="tc-bio">IT and Data Analytics professional with deep expertise in cybersecurity operations, enterprise infrastructure architecture, pricing intelligence, and business process optimisation. Has contributed to over $4 million in deal closures.</p>
+          <p class="tc-bio" style="margin-top:10px">Extensive hands-on experience with Cisco, Fortinet, Palo Alto Networks, Sophos, Avaya, Dell EMC, and more. AWS and IBM certified, with specialisation in cybersecurity operations and data analytics.</p>
+          <div class="cert-row">
+            <span class="cert">AWS Certified</span><span class="cert">IBM Certified</span>
+            <span class="cert">Cybersecurity Ops</span><span class="cert">Data Analytics</span>
+            <span class="cert">Cisco</span><span class="cert">Fortinet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="statbar" style="border-top:3px solid var(--brand)">
+  <div class="si"><div class="sn" data-count="23" data-sf="+">0+</div><div class="sl">Years at Standards Org</div></div>
+  <div class="si"><div class="sn" data-pf="$" data-count="4" data-sf="M+">$0</div><div class="sl">Deal Value Supported</div></div>
+  <div class="si"><div class="sn" data-count="8" data-sf="+">0+</div><div class="sl">ISO Certs Held</div></div>
+  <div class="si"><div class="sn" data-count="9" data-sf="+">0+</div><div class="sl">Industries Served</div></div>
+</div>
+
+<div class="cta-band">
+  <img class="cta-band-img" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&q=80&fit=crop" alt=""/>
+  <div class="w">
+    <div class="cta-band-content rv">
+      <h2 class="title title-light" style="margin-bottom:16px">Work with <em>renowned</em> ISO experts</h2>
+      <p class="lead-light" style="margin-bottom:32px;max-width:500px;margin-inline:auto">Ready to start your ISO journey? Let's talk about where you are and where you want to be.</p>
+      <a href="/contact" class="btn btn-brand btn-lg">Get a Free Quote →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-top">
+    <div class="w">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-logo" style="margin:0;padding:0"><img src="images/Portlanders-03.png" alt="Portlanders Services" class="foot-logo-img"/></div>
+          <p class="foot-desc">Professional ISO consulting &amp; engineering advisory services. Helping organisations across Nigeria and Africa achieve compliance, resilience, and operational excellence.</p>
+          <div class="foot-social">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-head">ISO Standards</div>
+          <ul class="foot-links">
+            <li><a href="/iso-9001">ISO 9001 – Quality</a></li>
+            <li><a href="/iso-27001">ISO 27001 – Info Security</a></li>
+            <li><a href="/iso-45001">ISO 45001 – H&amp;S</a></li>
+            <li><a href="/iso-14001">ISO 14001 – Environmental</a></li>
+            <li><a href="/iso-37001">ISO 37001 – Anti-Bribery</a></li>
+            <li><a href="/iso-22301">ISO 22301 – Continuity</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="foot-head">Services</div>
+          <ul class="foot-links">
+            <li><a href="/services">Management Systems</a></li>
+            <li><a href="/services">Engineering Consulting</a></li>
+            <li><a href="/services">Risk &amp; Compliance</a></li>
+            <li><a href="/services">Internal Audits</a></li>
+            <li><a href="/services">Training &amp; Awareness</a></li>
+            <li><a href="/about">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="foot-head">Contact</div>
+          <div class="foot-ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg><span>+234 807 773 3324</span></div>
+          <div class="foot-ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>info@portlandersservices.com</span></div>
+          <div class="foot-ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>59c Association Crescent,<br/>Agege, Lagos, Nigeria</span></div><div class="foot-ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>1501 South Greenley Hwy Ste C #1600 Cheyenne, WY 82007</span></div>
+          <div style="margin-top:18px"><a href="/contact" class="btn btn-brand btn-sm">Get a Quote →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w">
+    <div class="foot-bot">
+      <p class="foot-copy">Copyright&copy; 2026 Portlanders Services Limited. All rights reserved. <a href="https://www.leadtrotech.com.ng" target="_blank" rel="noopener noreferrer">Site developed by Leadtrotech Technologies Limited</a></p>
+      <div class="foot-leg"><a href="/privacy">Privacy Policy</a><a href="#">Terms of Use</a><a href="/contact">Contact</a></div>
+    </div>
+  </div>
+</footer>
+<button id="stb" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<script>
+// NAV scroll
+(function(){
+  var n=document.getElementById('nav');
+  if(!n)return;
+  window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
+})();
+
+// MOBILE NAV
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('mob-nav'),c=document.getElementById('mob-close');
+  if(!b)return;
+  b.addEventListener('click',function(){b.classList.toggle('open');m.classList.toggle('open')});
+  if(c)c.addEventListener('click',function(){b.classList.remove('open');m.classList.remove('open')});
+})();
+
+// ACTIVE LINK
+(function(){
+  var path=location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.nav-link').forEach(function(a){
+    if((a.getAttribute('href')||'')==path)a.classList.add('active');
+  });
+})();
+
+// REVEAL
+(function(){
+  var io=new IntersectionObserver(function(ee){ee.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -24px 0px'});
+  document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(function(el){io.observe(el)});
+})();
+
+// COUNTER
+(function(){
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var io2=new IntersectionObserver(function(ee){
+      if(!ee[0].isIntersecting)return;io2.disconnect();
+      var t=parseFloat(el.dataset.count),sf=el.dataset.sf||'',pf=el.dataset.pf||'',dc=el.dataset.dc||0,dur=1600,st=null;
+      requestAnimationFrame(function step(ts){
+        if(!st)st=ts;var p=Math.min((ts-st)/dur,1),e2=1-Math.pow(1-p,3);
+        el.textContent=pf+(t*e2).toFixed(dc)+sf;if(p<1)requestAnimationFrame(step);
+      });
+    },{threshold:.5});
+    io2.observe(el);
+  });
+})();
+
+// PRINCIPLE TABS
+(function(){
+  var tabs=document.querySelectorAll('.ptab');
+  var panels=document.querySelectorAll('.ppanel');
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.classList.remove('active')});
+      panels.forEach(function(x){x.classList.remove('active')});
+      t.classList.add('active');
+      if(panels[i])panels[i].classList.add('active');
+    });
+  });
+})();
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){q.closest('.faq-item').classList.toggle('open')});
+});
+
+// FORM
+(function(){
+  var f=document.getElementById('cf');if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    f.style.transition='opacity .3s';f.style.opacity='0';
+    setTimeout(function(){f.style.display='none';var s=document.getElementById('fs');if(s)s.style.display='block'},320);
+  });
+  document.querySelectorAll('.fsel').forEach(function(s){s.addEventListener('change',function(){s.classList.add('filled')})});
+})();
+
+// SCROLL TOP
+(function(){
+  var b=document.getElementById('stb');if(!b)return;
+  window.addEventListener('scroll',function(){b.classList.toggle('show',window.scrollY>500)},{passive:true});
+  b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+})();
+</script>
+<div class="sticky-cta" id="sticky-cta">
+  <div class="sticky-cta-inner">
+    <p>Work with <span>Nigeria's leading ISO consultants.</span> Get your free quote today.</p>
+    <form class="sticky-cta-form" id="sticky-form">
+      <input class="sticky-input" type="email" placeholder="Your email address" required/>
+      <a href="/contact" class="btn btn-brand btn-sm">Get a Quote →</a>
+      <button type="button" class="sticky-cta-close" id="sticky-close" aria-label="Close">&times;</button>
+    </form>
+  </div>
+</div>
+<div class="cookie-banner" id="cookie-banner">
+  <h4>🍪 We use cookies</h4>
+  <p>We use cookies to improve your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking "Accept All", you consent to our use of cookies. <a href="/privacy">Read More</a></p>
+  <div class="cookie-btns">
+    <button class="cookie-accept" id="cookie-accept">Accept All</button>
+    <button class="cookie-decline" id="cookie-decline">Decline</button>
+  </div>
+</div>
+<script>
+(function(){
+  var root = document.documentElement;
+
+  /* ── DARK MODE TOGGLE ── */
+  var btn = document.getElementById('dm-btn');
+  if (btn) {
+    btn.addEventListener('click', function(){
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  }
+
+  /* ── COOKIE BANNER ── */
+  var banner  = document.getElementById('cookie-banner');
+  var accept  = document.getElementById('cookie-accept');
+  var decline = document.getElementById('cookie-decline');
+  if (banner) {
+    if (!localStorage.getItem('cookieConsent')) {
+      setTimeout(function(){ banner.classList.add('show'); }, 1200);
+    }
+    function dismissCookie(v){
+      banner.classList.remove('show');
+      localStorage.setItem('cookieConsent', v);
+    }
+    if (accept)  accept.addEventListener('click',  function(){ dismissCookie('accepted'); });
+    if (decline) decline.addEventListener('click', function(){ dismissCookie('declined'); });
+  }
+
+  /* ── STICKY CTA ── */
+  var bar     = document.getElementById('sticky-cta');
+  var closeBtn= document.getElementById('sticky-close');
+  var sForm   = document.getElementById('sticky-form');
+  if (bar) {
+    var ctaClosed = false;
+    window.addEventListener('scroll', function(){
+      if (ctaClosed) return;
+      bar.classList.toggle('show', window.scrollY > 600);
+    }, {passive: true});
+    if (closeBtn) closeBtn.addEventListener('click', function(){
+      ctaClosed = true;
+      bar.classList.remove('show');
+    });
+    if (sForm) sForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      bar.innerHTML = '<div class="sticky-cta-inner" style="justify-content:center"><p style="flex:none;color:var(--brand);font-size:15px">&#10003; &nbsp;Thanks! We\'ll be in touch within one business day.</p></div>';
+    });
+  }
+})();
+</script>
+</body>
+</html>
